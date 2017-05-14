@@ -1,0 +1,14 @@
+<div class="text-center">
+  <h2>Category: <%= @category.name %></h2>
+  <div>
+    <%= link_to 'Edit', edit_admin_category_path(@category), class: 'btn btn-primary' %>
+    <%= link_to 'Delete', admin_category_path(@category),
+                method: :delete,
+                class: 'btn btn-danger',
+                data: { confirm: "Are you sure?" } %>
+  </div>
+  <br>
+  <div>
+    <%= link_to 'Back to Categories', admin_categories_path, class: 'btn btn-primary' %>
+  </div>
+</div>

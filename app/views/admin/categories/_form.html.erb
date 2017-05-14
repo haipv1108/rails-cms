@@ -1,0 +1,9 @@
+<%= form_for([:admin, @category]) do |f| %>
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, autofocus: true, class: "form-control"  %>
+    </div>
+
+    <%= f.submit @category.new_record? ? 'Create Category' : 'Update Category',
+                 class: 'btn btn-primary' %>
+<% end %>
