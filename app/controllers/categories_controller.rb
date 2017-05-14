@@ -1,0 +1,4 @@
+class CategoriesController < ContentController
+
+
+end

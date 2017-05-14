@@ -3,7 +3,7 @@ module Admin
     before_action :set_category, only: [:show, :edit, :update, :destroy]
 
     def index
-      @categories = Category.all
+      @categories = Category.paginate(:page => params[:page], :per_page => 2)
     end
 
     def new
