@@ -1,4 +1,9 @@
 <%= form_for([:admin, @category]) do |f| %>
+    <% if @category.errors.any? %>
+      <% @category.errors.full_messages.each do |message| %>
+        <div class="alert alert-danger"><%= message %></div>
+      <% end %>
+    <% end %>
     <div class="form-group">
       <%= f.label :name %>
       <%= f.text_field :name, autofocus: true, class: "form-control"  %>
