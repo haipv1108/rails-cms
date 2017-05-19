@@ -3,7 +3,9 @@ Rails.application.routes.draw do
 
   resources :categories, only: [:show]
   namespace :admin do
-    resources :categories
+    resources :categories do
+      resources :sub_categories
+    end
   end
 
   root 'static_pages#index'

@@ -18,7 +18,10 @@
             <td><%= category.name %></td>
             <td>
               <%= link_to 'Show', admin_category_path(category), class: 'btn btn-primary' %>
-              <%= link_to 'Delete', admin_category_path(category), class: 'btn btn-danger' %>
+              <%= link_to 'Delete', admin_category_path(category),
+                          class: 'btn btn-danger',
+                          method: :delete,
+                          data: { confirm: 'Are you sure?' } %>
             </td>
           </tr>
         <% end %>
