@@ -4,7 +4,7 @@ class AdminController < ApplicationController
 
   private
     def correct_admin
-      unless current_user && current_user.admin?
+      unless current_user&.admin?
         flash[:danger] = "Your account does not have access permissions"
         redirect_to root_path
       end
